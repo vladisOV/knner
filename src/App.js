@@ -50,11 +50,11 @@ class App extends Component {
                 headers={this.state.headers}
               />
             </Col>
-            <Row className="csv-row">
-              <Col md={4} mdOffset={4}>
-                <ParamConfigurer />
-              </Col>
-            </Row>
+          </Row>
+          <Row className="csv-row">
+            <Col md={4} mdOffset={4}>
+              <ParamConfigurer />
+            </Col>
           </Row>
         </Grid>
       </div>
