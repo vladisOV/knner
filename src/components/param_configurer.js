@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import {
   FormControl,
   FormGroup,
-  ControlLabel,
-  FieldGroup
+  Button
 } from "react-bootstrap";
 
 class ParamConfigurer extends Component {
@@ -42,7 +41,7 @@ class ParamConfigurer extends Component {
             onChange={this.onTrainingSetChange}
           />
         </FormGroup>
-        <Button>Done</Button>
+        <Button onClick={this.props.onParamsConfigured(this.state.kVal, this.state.setVal)}>Done</Button>
       </div>
     );
   }

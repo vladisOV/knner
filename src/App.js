@@ -34,6 +34,10 @@ class App extends Component {
     });
   };
 
+  addParams = (k, trainingSetSize) => {
+    console.log("Params = ", k, trainingSetSize);
+  };
+
   render() {
     return (
       <div className="App">
@@ -53,7 +57,7 @@ class App extends Component {
           </Row>
           <Row className="csv-row">
             <Col md={4} mdOffset={4}>
-              <ParamConfigurer />
+              <ParamConfigurer onParamsConfigured={this.addParams} />
             </Col>
           </Row>
         </Grid>
