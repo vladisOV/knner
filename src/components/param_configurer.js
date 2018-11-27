@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import {
-  FormControl,
-  FormGroup,
-  Button
-} from "react-bootstrap";
+import { FormControl, FormGroup, Button } from "react-bootstrap";
 
 class ParamConfigurer extends Component {
   constructor(props) {
@@ -20,6 +16,13 @@ class ParamConfigurer extends Component {
 
   onTrainingSetChange = e => {
     this.setState({ setVal: e.target.value });
+  };
+
+  onParamsConfigured = () => {
+    this.props.onParamsConfigured(
+      parseInt(this.state.kVal),
+      parseInt(this.state.setVal)
+    );
   };
 
   render() {
@@ -41,7 +44,9 @@ class ParamConfigurer extends Component {
             onChange={this.onTrainingSetChange}
           />
         </FormGroup>
-        <Button onClick={this.props.onParamsConfigured(this.state.kVal, this.state.setVal)}>Done</Button>
+        <Button bsStyle="primary" onClick={this.onParamsConfigured}>
+          Predict
+        </Button>
       </div>
     );
   }

@@ -20,7 +20,6 @@ class DataChoser extends Component {
     this.setState({ headers: newProps.headers });
     options = this.getOptions(newProps.headers);
     labels = this.getOptions(newProps.headers);
-    console.log(options);
   }
 
   getOptions(headers) {
